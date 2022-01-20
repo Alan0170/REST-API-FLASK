@@ -27,7 +27,7 @@ def verifica_blocklist(self, token):
 def token_de_acesso_invalidado(jwt_header, jwt_payload):
     return jsonify({'message': 'You have been logged out.'}), 401
 
-api.add_resource(Hoteis, '/hoteis')
+api.add_resource(Hoteis, '/hoteis', methods=['GET'])
 api.add_resource(Hotel, '/hoteis/<string:hotel_id>')
 api.add_resource(User, '/usuarios/<int:user_id>')
 api.add_resource(UserRegister, '/cadastro')
